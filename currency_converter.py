@@ -30,7 +30,7 @@ def box_maker(column,row,position=[1,1]):
             print("|")
 
 def aviable_country():
-    
+        print("Aviable country")
 os.system("cls")
 column = os.get_terminal_size().columns
 x=(column-len("Currency Converter"))//2
