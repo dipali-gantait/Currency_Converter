@@ -2,7 +2,7 @@
 import os
 import sys
 import time
-
+import platform
 """
 1. \033 -> used to start ANCI logic
 2. \033[y;xH -> move curser to (x,y) position
@@ -28,10 +28,22 @@ def box_maker(column,row,position=[1,1]):
             for i in range(column-2):
                 print(" ",end="")
             print("|")
+  
 
+def clearscreen():
+  system_name = platform.system()
+  if system_name == "Windows":
+    os.system("cls")
+  else:
+    os.system("clear")
+    
+    
 def aviable_country():
         print("Aviable country")
-os.system("cls")
+
+
+
+clearscreen()
 column = os.get_terminal_size().columns
 x=(column-len("Currency Converter"))//2
 move(x,1)
